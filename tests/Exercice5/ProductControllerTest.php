@@ -2,7 +2,7 @@
 
 namespace App\Tests\Exercice5;
 
-use App\Controller\ProductController;
+use App\Controller\Product;
 use App\Form\ProductType;
 use Exception;
 use ReflectionClass;
@@ -37,7 +37,7 @@ class ProductControllerTest extends WebTestCase
     {
         $this->testFileCreated();
 
-        $productController = new ReflectionClass(ProductController::class);
+        $productController = new ReflectionClass(Product::class);
 
         $editMethod = $this->testEditMethodCreated($productController);
         $this->testPublic($editMethod);
