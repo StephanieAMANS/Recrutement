@@ -33,14 +33,9 @@ class Product
     private $creationDate;
 
     /**
-     * @ORM\Column(type="datetime")
-     */
-    private $dateUpdate;
-
-    /**
      * @ORM\Column(type="datetime", nullable=true)
      */
-    private $dateUpadte;
+    private $dateUpdate;
 
     public function getId(): ?int
     {
@@ -97,12 +92,12 @@ class Product
 
     public function getDateUpadte(): ?\DateTimeInterface
     {
-        return $this->dateUpadte;
+        return $this->dateUpdate;
     }
 
     public function setDateUpadte(?\DateTimeInterface $dateUpadte): self
     {
-        $this->dateUpadte = $dateUpadte;
+        $this->dateUpdate = $dateUpadte;
 
         return $this;
     }
