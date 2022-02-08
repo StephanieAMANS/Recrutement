@@ -11,9 +11,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class ProductController extends AbstractController
 {
- /**
-  * @Route("/product", name="product")
-  */
+    /**
+     * @Route("/product", name="product")
+     */
     public function index(ManagerRegistry $managerRegistry, ProductRepository $productRepository): Response
     {
         $productRepository = $managerRegistry->getRepository(Product::class);
@@ -21,5 +21,13 @@ class ProductController extends AbstractController
         return $this->render('product/index.html.twig', [
             'products' => $products,
         ]);
+    }
+
+    /**
+     * @Route("/product/new", name="product_new")
+     */
+    public function new()
+    {
+        
     }
 }
